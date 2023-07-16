@@ -30,12 +30,12 @@ RUN git submodule update --init --recursive
 
 # Install Pantheon dependencies
 RUN DEBIAN_FRONTEND=noninteractive ./tools/install_deps.sh
-RUN DEBIAN_FRONTEND=noninteractive ./src/experiments/setup.py --install-deps --schemes "cubic vegas bbr ledbat pcc verus sprout quic scream vivace pcc_experimental fillp indigo fillp_sheep proteus_s proteus_h"
+RUN DEBIAN_FRONTEND=noninteractive ./src/experiments/setup.py --install-deps --schemes "cubic vegas bbr ledbat pcc verus sprout quic scream vivace pcc_experimental fillp indigo fillp_sheep proteus_s proteus_p"
 
 # Set up Pantheon 
-RUN src/experiments/setup.py --setup --schemes "cubic vegas bbr ledbat pcc verus sprout quic scream vivace pcc_experimental fillp indigo fillp_sheep proteus_s proteus_h"
+RUN src/experiments/setup.py --setup --schemes "cubic vegas bbr ledbat pcc verus sprout quic scream vivace pcc_experimental fillp indigo fillp_sheep proteus_s proteus_p"
 
 # Expose port for running tests
 EXPOSE 5000
 
-CMD ["src/experiments/test.py", "local","--schemes", "cubic vegas bbr ledbat pcc verus sprout quic scream vivace pcc_experimental fillp indigo fillp_sheep proteus_s proteus_h"]
+CMD ["src/experiments/test.py", "local","--schemes", "cubic vegas bbr ledbat pcc verus sprout quic scream vivace pcc_experimental fillp indigo fillp_sheep proteus_s proteus_p"]
