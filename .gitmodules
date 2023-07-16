@@ -54,3 +54,7 @@
 	path = third_party/fillp-sheep
 	url = https://github.com/fillthepipe/fillp-sheep.git
 	ignore = dirty
+[submodule "third_party/pcc-proteus"]
+	path = third_party/pcc-proteus
+	url = https://github.com/PCCproject/PCC-Uspace
+	ignore = dirty
