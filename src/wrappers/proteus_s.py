@@ -30,7 +30,7 @@ def main():
 
     if args.option == 'sender':
         os.environ['LD_LIBRARY_PATH'] = path.join(lib_dir)
-        cmd = [send_src, 'send', args.ip, args.port,'Vivace','Scavenger']
+        cmd = [send_src, 'send', args.ip, args.port,'Vivace','Scavenger','0.0015']
         check_call(cmd)
         return
 
